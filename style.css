@@ -26,7 +26,7 @@ body{
 main{
     display: flex;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
 }
 .caja__encriptar{
     display: flex;
@@ -44,6 +44,8 @@ main{
     outline: none;
     margin:80px 0px 0px 0px ;
     font-family: var(--fuente-inter);
+    resize: none;
+
 }
 
 .parrafo{
@@ -85,6 +87,7 @@ main{
     flex-direction: column;
     align-items: center;
     width: 400px;
+    height: 600px;
     margin: 40px;
     border-radius: 32px;
     box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.2);
@@ -105,4 +108,29 @@ main{
 .subtitulo__caja{
    font-size: 1rem;
    font-weight: 400;
+}
+
+.btn-copiar{
+    width: 328px;
+    height: 67px;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    background-color: #D8DFE8;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    margin-top: 160px;
+}
+
+.p-encriptado{
+    margin-bottom: 200px;    
+    font-family: var(--fuente-inter);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+.container{
+    margin: auto;
+    text-align: center;
 }

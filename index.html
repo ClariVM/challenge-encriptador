@@ -15,7 +15,8 @@
 
             <div class="caja__encriptar">
                 <div>
-                    <input class="caja__texto" placeholder="Ingrese el texto aquí" type="text" />
+                    <textarea id="textoEncriptar" class="caja__texto" placeholder="Ingrese el texto aquí" type="text"></textarea>
+                    
                 </div>
 
                 <div class="texto__botones">
@@ -24,14 +25,14 @@
                         <p>Sólo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="botones">
-                        <button class="btn-azul">Encriptar</button>
-                        <button class="btn-gris">Desencriptar</button>
+                        <button onclick="mostrarTexto('encriptar')" class="btn-azul">Encriptar</button>
+                        <button onclick="mostrarTexto('desencriptar')" class="btn-gris">Desencriptar</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="caja__texto__encriptado">
+        <section class="caja__texto__encriptado" id="mostrar">
             <img src="./assets/Muñeco.png" alt="muñeco" />
             <div class="titulos">
                 <h1 class="titulo__caja">Ningún mensaje fue encontrado</h1>
@@ -44,6 +45,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
