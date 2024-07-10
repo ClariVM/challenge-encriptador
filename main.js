@@ -1,4 +1,6 @@
 
+
+
 function encriptarTexto() {
   const textoEncriptar = document.getElementById("textoEncriptar").value;
     const textoEncriptado = textoEncriptar.replace( /a|e|i|o|u/g,
@@ -45,7 +47,11 @@ function desencriptarTexto() {
 
 
 function mostrarTexto(accion) {
+    const textoEncriptar = document.getElementById("textoEncriptar").value;
 
+    if (!textoEncriptar) {
+        return;
+      }
     let texto;
 
     if (accion === 'encriptar') {
@@ -69,7 +75,12 @@ function mostrarTexto(accion) {
 
     const btnCopiar = document.createElement('button');
     btnCopiar.textContent = "Copiar";
-    btnCopiar.classList.add("btn-copiar")
+    btnCopiar.classList.add("btn-copiar");
+
+    btnCopiar.addEventListener('click', function () {
+        copiarTexto(parrafo.textContent);
+        btnCopiar.textContent = "Copiado!";
+      });
 
     
     container.appendChild(parrafo)
@@ -79,3 +90,17 @@ function mostrarTexto(accion) {
     mostrarTexto.appendChild(container);
     
 }
+function copiarTexto(texto) {
+    
+    const textArea = document.createElement('textarea');
+    textArea.value = texto;
+    document.body.appendChild(textArea);
+  
+ 
+    textArea.select();
+    document.execCommand('copy');
+  
+
+    document.body.removeChild(textArea);
+  
+  }
